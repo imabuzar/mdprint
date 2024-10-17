@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}MDPrint{% endblock %}</title>
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}" />
+
+  {% block style %}{% endblock %}
+
+</head>
+
+<body>
+  <div class="toast">
+    <div class="toast-container">
+      <p class="toast-text has-text-weight-medium"></p>
+    </div>
+  </div>
+  {% block content%}{% endblock %}
+
+  <script src="{{ url_for('static', filename='js/base.js') }}"></script>
+
+  {% block script %}{% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+@import url("shared.css");
+
+:root {
+  --page-bg: #f6fafd;
+  --text-color: #132d53;
+  --cover-page-bg: #32373e;
+  --cover-page-text: white;
+  --cover-page-line: #84a1ca;
+  --section-page-bg: #f6fafd;
+  --section-page-text: #172c4d;
+  --section-page-line: #172c4d;
+
+  --h1-color: #1a3c6f;
+  --h2-color: #194c8f;
+  --h3-color: #1858b5;
+  --h4-color: #207df6;
+  --h5-color: #207df6;
+  --h6-color: #207df6;
+}
+
+h4,
+h5 {
+  text-decoration: underline #207df6;
+}
+
+blockquote {
+  border-left: 4pt solid #ccc;
+}
+
+pre,
+code {
+  border: 1pt solid #dddddd;
+  background-color: #e4ecf3;
+}
+
+hr {
+  border-top: 1pt solid #b4b4b4;
+}

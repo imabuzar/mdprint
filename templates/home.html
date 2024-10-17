@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}MDPrint{% endblock %}
+
+{% block style %}
+<style>
+    .home {
+        max-width: 1100px;
+        box-sizing: border-box;
+        padding: 32px;
+        padding-top: 120px;
+        user-select: none;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .home-content {
+        flex: 1;
+    }
+
+    .check-icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    @media only screen and (max-width:980px) {
+        .logo-image {
+            display: none;
+        }
+
+        .home-content h1 {
+            font-size: 2.4rem !important;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="home">
+    <div class="home-content">
+        <img class="check-icon mb-4" src="{{ url_for('static', filename='icons/check.svg') }}" alt="check" />
+        <h1 class="title is-1">
+            Empowering Your Workflow with MDPrint
+        </h1>
+        <p class="subtitle is-5 mt-4">
+            Streamline your productivity with MDPrint. Our intuitive platform lets you quickly create professional PDF
+            documents from Markdown. Write, customize, and generate PDFs in seconds with ease.
+        </p>
+        <a role="button" class="button is-primary" href="{{ url_for('generate') }}">
+            <span class=" icon">
+                <img src="{{ url_for('static', filename='icons/rocket.svg') }}" alt="rocket" />
+            </span>
+            <span>
+                Get Started
+            </span>
+        </a>
+    </div>
+    <div class="logo-image">
+        <img src="{{ url_for('static', filename='icons/logo.png') }}" alt=" logo" width="280">
+    </div>
+</div>
+{% endblock %}
