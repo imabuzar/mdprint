@@ -10,52 +10,41 @@ A web application built with Python Flask for generating PDF documents from Mark
 
 ## Getting Started
 
-## Getting Started
-
 ### Prerequisites
 
-- Python 3.x
-- Flask
-- WeasyPrint
-- Markdown
+- Docker (for Docker installation)
+- Python 3.12 or higher (for non-Docker installation)
 
 ### Installation
+
+**Note:** We recommend using the Docker installation method, as `weasyprint` relies on certain system packages that can be challenging to install manually.
+
+### From Docker (Recommended)
+
+1. Pull the Docker image from Docker Hub:  
+   `docker pull imabuzar/mdprint`
+2. Run the Docker container:  
+   `docker run -it -p 5000:5000 imabuzar/mdprint`
+
+### From Github
 
 1. Clone the repository:  
    `git clone https://github.com/imabuzar/mdprint.git`
 2. Navigate to the project directory:  
    `cd mdprint`
 3. Create a virtual environment:
-   - On **Windows**:  
-     `python -m venv .venv`
-   - On **macOS/Linux**:  
-     `python3 -m venv .venv`
+   `python3 -m venv .venv` (on Linux/Mac) or `python -m venv .venv` (on Windows)
 4. Activate the virtual environment:
-   - On **Windows**:  
-     `.\.venv\Scripts\activate`
-   - On **macOS/Linux**:  
-     `source .venv/bin/activate`
+   `source .venv/bin/activate` (on Linux/Mac) or `.venv\Scripts\activate` (on Windows)
 5. Install the dependencies:  
    `pip install -r requirements.txt`
 6. Run the application:  
-   `python app.py` or `flask run`
+   `flask run`
 
 ## Usage
 
-1. Open your web browser and navigate to `http://localhost:5000`.
-2. Click on the "Generate PDF Now" button to access the Markdown editor.
-3. Write your Markdown content and customize your PDF settings.
-4. Click the "Generate PDF" button to download your PDF document.
-
-## Customization
-
-### Themes
-
-MDPrint comes with two built-in themes: Light and Dark. You can switch between these themes in the Markdown editor.
-
-### Page Numbers
-
-Choose to display page numbers in your PDF document. This option is available in the Markdown editor.
+1. Open your web browser and navigate to `http://localhost:5000` (or custom port if using docker).
+2. Write your Markdown content, generate and download PDF document.
 
 ## Markdown Syntax
 
