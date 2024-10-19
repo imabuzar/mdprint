@@ -38,7 +38,7 @@ A web application built with Python Flask for generating PDF documents from Mark
 5. Install the dependencies:  
    `pip install -r requirements.txt`
 6. Run the application:  
-   `python app.py` or `flask run`
+   `flask run`
 
 ## Usage
 

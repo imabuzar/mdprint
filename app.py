@@ -104,7 +104,3 @@ def replace_cover_title(match):
     content = match.group(1)
     html_content = markdown.markdown(content)
     return f'<div class="cover-page">{html_content}</div>'
-
-
-if __name__ == "__main__":
-    app.run("0.0.0.0", debug=True)
